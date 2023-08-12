@@ -1,0 +1,9 @@
+FROM python:3.8
+ENV PYTHONUNBUFFERED 1
+COPY ./blog /blog
+WORKDIR /blog
+EXPOSE 8000
+RUN python -m venv /py && \
+    /py/bin/pip install -r /tmp/requirements.txt && \
+    rm -rf /tmp
+CMD "python manage.py runserver"

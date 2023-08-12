@@ -1,0 +1,2 @@
+Django == latest
+django-rest-framework==latest
